@@ -3,108 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoteles Mixteca</title>
+  <title>Hoteles Mixteca | Guía Profesional</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <div class="hero-section">
+  <header class="hero-section">
     <div class="hero-content">
       <h1>HOTELES MIXTECA</h1>
-      <p>Guía de hospedaje en Huajuapan, Tlaxiaco y Nochixtlán</p>
+      <p>Guía premium de hospedaje en la región mixteca oaxaqueña</p>
     </div>
-  </div>
+  </header>
 
   <main class="container">
-
-    <div class="category-header">
-      <h2>HUAJUAPAN DE LEÓN</h2>
-      <div class="line-decorator"></div>
-    </div>
-    <div class="grid scroll-horizontal">
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel García Peral" data-desc="Alberca, restaurante y salas ejecutivas de primer nivel." data-wifi="true" data-parking="true" data-restaurante="true" data-alberca="true" data-telefono="953 532 0077" data-direccion="Constitución #2, Centro, Huajuapan de León" data-precio="$850 - $1,200 MXN">
-        <div class="img" style="background-image: url('img/hoteles/gae1.avif')"></div>
-        <div class="card-content"><h3>Hotel García Peral</h3><p>Alberca, restaurante y salas ejecutivas de primer nivel.</p></div>
-      </div>
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel Casa Blanca" data-desc="Estancia tranquila con servicios de desayuno y lavandería." data-wifi="true" data-parking="true" data-restaurante="false" data-alberca="false" data-telefono="953 532 0455" data-direccion="Amatista #14, Col. El Carmen" data-precio="$500 - $750 MXN">
-        <div class="img" style="background-image: url('img/hoteles/casa1.avif')"></div>
-        <div class="card-content"><h3>Hotel Casa Blanca</h3><p>Estancia tranquila con servicios de desayuno y lavandería.</p></div>
-      </div>
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel Yuvi" data-desc="Servicios completos con restaurante y TV por cable." data-wifi="true" data-parking="true" data-restaurante="true" data-alberca="false" data-telefono="953 532 1922" data-direccion="Paraísos #4, Col. Aviación" data-precio="$600 - $850 MXN">
-        <div class="img" style="background-image: url('img/hoteles/yuvi1.avif')"></div>
-        <div class="card-content"><h3>Hotel Yuvi</h3><p>Servicios completos con restaurante y TV por cable.</p></div>
-      </div>
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel Luján" data-desc="Hospedaje accesible y limpio con excelente ubicación." data-wifi="true" data-parking="false" data-restaurante="false" data-alberca="false" data-telefono="953 532 2314" data-direccion="Zaragoza #45, Centro" data-precio="$400 - $600 MXN">
-        <div class="img" style="background-image: url('img/hoteles/centro1.avif')"></div>
-        <div class="card-content"><h3>Hotel Luján</h3><p>Hospedaje accesible y limpio con excelente ubicación.</p></div>
-      </div>
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel Ruta del Sol" data-desc="Cómodo, seguro y con amplio estacionamiento privado." data-wifi="true" data-parking="true" data-restaurante="false" data-alberca="false" data-telefono="953 532 3566" data-direccion="Carr. Internacional Km 340" data-precio="$450 - $700 MXN">
-        <div class="img" style="background-image: url('img/hoteles/sol1.avif')"></div>
-        <div class="card-content"><h3>Hotel Ruta del Sol</h3><p>Cómodo, seguro y con amplio estacionamiento privado.</p></div>
-      </div>
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel Jardín Real" data-desc="Instalaciones pacíficas con jardines y áreas verdes." data-wifi="true" data-parking="true" data-restaurante="true" data-alberca="false" data-telefono="953 532 4411" data-direccion="Av. Venustiano Carranza #82" data-precio="$700 - $1,000 MXN">
-        <div class="img" style="background-image: url('img/hoteles/jardin1.avif')"></div>
-        <div class="card-content"><h3>Hotel Jardín Real</h3><p>Instalaciones pacíficas con jardines y áreas verdes.</p></div>
-      </div>
-    </div>
-
-    <div class="category-header">
-      <h2>TLAXIACO</h2>
-      <div class="line-decorator"></div>
-    </div>
-    <div class="grid scroll-horizontal">
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel Del Portal" data-desc="Vistas espectaculares al centro histórico y restaurante." data-wifi="true" data-parking="false" data-restaurante="true" data-alberca="false" data-telefono="953 552 0122" data-direccion="Portal Benito Juárez #1" data-precio="$600 - $950 MXN">
-        <div class="img" style="background-image: url('img/hoteles/portal1.avif')"></div>
-        <div class="card-content"><h3>Hotel Del Portal</h3><p>Vistas espectaculares al centro histórico y restaurante.</p></div>
-      </div>
-      <div class="card" onclick="openHotel(this)" data-nombre="Posada Mixteca" data-desc="Habitaciones confortables y seguras con ambiente hogareño." data-wifi="true" data-parking="true" data-restaurante="false" data-alberca="false" data-telefono="953 552 1455" data-direccion="Galeana #24, Barrio San Diego" data-precio="$500 - $750 MXN">
-        <div class="img" style="background-image: url('img/hoteles/posada1.avif')"></div>
-        <div class="card-content"><h3>Posada Mixteca</h3><p>Habitaciones confortables y seguras con ambiente hogareño.</p></div>
-      </div>
-    </div>
-
-    <div class="category-header">
-      <h2>NOCHIXTLÁN</h2>
-      <div class="line-decorator"></div>
-    </div>
-    <div class="grid scroll-horizontal">
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel Ruta Mixteca" data-desc="Ideal para viajeros en ruta, con restaurante y parking privado." data-wifi="true" data-parking="true" data-restaurante="true" data-alberca="false" data-telefono="951 542 0344" data-direccion="Carr. Federal Cristóbal Colón Km 80" data-precio="$550 - $800 MXN">
-        <div class="img" style="background-image: url('img/hoteles/ruta1.avif')"></div>
-        <div class="card-content"><h3>Hotel Ruta Mixteca</h3><p>Ideal para viajeros en ruta, con restaurante y parking privado.</p></div>
-      </div>
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel Jade" data-desc="Moderno, confortable, con aire acondicionado y terraza." data-wifi="true" data-parking="true" data-restaurante="false" data-alberca="false" data-telefono="951 233 8910" data-direccion="Melchor Ocampo #18" data-precio="$650 - $950 MXN">
-        <div class="img" style="background-image: url('img/hoteles/jade1.avif')"></div>
-        <div class="card-content"><h3>Hotel Jade</h3><p>Moderno, confortable, con aire acondicionado y terraza.</p></div>
-      </div>
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel y Restaurant Fandangos" data-desc="Habitaciones con balcón y restaurante propio integrado." data-wifi="true" data-parking="true" data-restaurante="true" data-alberca="false" data-telefono="951 542 1122" data-direccion="Calle Robles #11, Nochixtlán" data-precio="$650 - $900 MXN">
-        <div class="img" style="background-image: url('img/hoteles/fan6.jpg')"></div>
-        <div class="card-content"><h3>Hotel Fandangos</h3><p>Habitaciones con balcón y restaurante propio integrado.</p></div>
-      </div>
-      <div class="card" onclick="openHotel(this)" data-nombre="Hotel Kristal" data-desc="Comodidad, habitaciones amplias y atención de primera." data-wifi="true" data-parking="true" data-restaurante="false" data-alberca="false" data-telefono="951 542 0199" data-direccion="Zaragoza #56, Barrio Chimeco" data-precio="$480 - $700 MXN">
-        <div class="img" style="background-image: url('img/hoteles/uni1.avif')"></div>
-        <div class="card-content"><h3>Hotel Kristal</h3><p>Comodidad, habitaciones amplias y atención de primera.</p></div>
-      </div>
-    </div>
-
+    <section>
+        <div class="category-header"><h2>HUAJUAPAN DE LEÓN</h2><div class="line-decorator"></div></div>
+        <div class="grid" id="grid-huajuapan"></div>
+    </section>
+    <section style="margin-top: 50px;">
+        <div class="category-header"><h2>TLAXIACO</h2><div class="line-decorator"></div></div>
+        <div class="grid" id="grid-tlaxiaco"></div>
+    </section>
+    <section style="margin-top: 50px;">
+        <div class="category-header"><h2>NOCHIXTLÁN</h2><div class="line-decorator"></div></div>
+        <div class="grid" id="grid-nochixtlan"></div>
+    </section>
   </main>
 
   <div class="modal" id="hotelModal" onclick="closeModal(event)">
     <div class="modal-content">
-      <div class="gallery">
-        <div class="main-img" id="mainImg"></div>
-        <div class="thumbs" id="thumbs"></div>
-      </div>
+      <div id="mainImg"></div>
       <div class="content">
-        <h1></h1>
-        <p class="desc"></p>
-        <div class="section">
-          <h4>Servicios incluidos</h4>
-          <div class="chips"></div>
-        </div>
-        <div class="section">
-          <h4>Contacto y Ubicación</h4>
-          <div class="info"></div>
-        </div>
+        <div id="modalStars"></div>
+        <h1 id="modalTitle"></h1>
+        <p id="modalType" class="hotel-type"></p>
+        <div id="modalDetails" style="margin: 20px 0;"></div>
+        <h4>Servicios incluidos</h4>
+        <div class="chips" id="modalChips"></div>
+        <div id="modalInfo"></div>
       </div>
     </div>
   </div>
