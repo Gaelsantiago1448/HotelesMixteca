@@ -1,0 +1,79 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #141923; color: #ffffff; overflow-y: auto; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+/* --- ESTILOS DE LA SECCIÓN HERO --- */
+.hero-section {
+  height: 55vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(20, 25, 35, 1)), url('../img/hoteles/fondoo.jpg');
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;
+}
+
+.hero-content h1 { font-size: 3.2rem; letter-spacing: 3px; margin-bottom: 8px; font-weight: 800; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+.hero-content p { font-size: 1.15rem; color: #b0b7c3; margin-bottom: 35px; }
+
+/* --- DECORADORES --- */
+.category-header { margin: 45px 0 20px 0; }
+.category-header h2 { font-size: 1.35rem; letter-spacing: 1.5px; color: #ffffff; }
+.line-decorator { width: 55px; height: 3px; background-color: #c29b7c; margin-top: 6px; }
+
+/* --- GRIDS CON SCROLL HORIZONTAL --- */
+.grid {
+  display: flex; overflow-x: auto; gap: 24px; padding-bottom: 20px;
+  scroll-behavior: smooth; cursor: grab;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* --- TARJETAS --- */
+.card { min-width: 280px; max-width: 280px; background-color: #1e2633; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.25s ease; }
+.card:hover { transform: translateY(-5px); }
+.card .img { height: 170px; background-size: cover; background-position: center; }
+.card-content { padding: 18px; }
+.card-content h3 { font-size: 1.15rem; margin-bottom: 8px; color: #ffffff; }
+.card-content p { font-size: 0.9rem; color: #929db0; line-height: 1.4; }
+
+/* --- VENTANA MODAL (CORREGIDA) --- */
+.modal {
+  display: none; /* <--- ESTO ES LO MÁS IMPORTANTE: Que esté oculto por defecto */
+  position: fixed; 
+  top: 0; left: 0; 
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); 
+  z-index: 1000;
+  /* Eliminamos el 'display: flex' de aquí porque el JS lo activará */
+  align-items: center; 
+  justify-content: center; 
+  padding: 20px;
+}
+.modal-content {
+  background-color: #1a202c; 
+  border-radius: 24px;
+  width: 90%;          /* Mantiene proporción sin deformarse */
+  max-width: 450px;    /* Tamaño ideal en PC */
+  max-height: 90vh;    /* Límite de altura para activar scroll interno */
+  overflow-y: auto;    /* Crea la barra de scroll cuando es necesario */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+/* --- DETALLES INTERNOS DEL MODAL --- */
+.gallery { position: relative; }
+.main-img { height: 250px; background-size: cover; background-position: center; transition: background-image 0.25s ease; }
+.thumbs { display: flex; gap: 10px; padding: 15px; background: rgba(0, 0, 0, 0.3); overflow-x: auto; }
+.thumb { width: 65px; height: 45px; border-radius: 6px; background-size: cover; background-position: center; cursor: pointer; border: 2px solid transparent; flex-shrink: 0; }
+.thumb.active, .thumb:hover { border-color: #c29b7c; transform: scale(1.05); }
+
+.modal-content .content { padding: 24px; }
+.modal-content h1 { font-size: 1.6rem; margin-bottom: 10px; }
+.modal-content .desc { font-size: 0.95rem; color: #a0aec0; line-height: 1.5; margin-bottom: 20px; }
+.section { margin-bottom: 20px; }
+.section h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #718096; margin-bottom: 10px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chips span { background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 6px 14px; border-radius: 15px; font-size: 0.85rem; }
+.info p { font-size: 0.9rem; margin-bottom: 8px; color: #cbd5e0; }
+.info p strong { color: #718096; }
